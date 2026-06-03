@@ -45,10 +45,15 @@ Create a plain-language briefing from GitHub Trending. Prefer WebFetch/WebSearch
    - In the detailed report, every first-time project gets a full breakdown. Projects already covered in prior reports get a short citation.
    - Do not overwrite an existing report unless the user asks.
 
-7. Generate HTML briefing and open in browser:
-   - Read the template at `skills/productivity/github-trending-briefing/reference/briefing-template.html` to understand its CSS and DOM structure.
-   - Generate `trending_reports/trending_briefing_YYYY-MM-DD.html` using the **exact same CSS and DOM structure** as the template. Fill each section with the actual briefing data from steps 4-5.
-   - The HTML file must be self-contained (no external resources). All CSS stays inline in `<style>`.
+7. Generate HTML report and open in browser:
+   - Read the template at `skills/productivity/github-trending-briefing/reference/briefing-template.html` to understand its CSS and DOM structure. The template is a **single-page, two-tab design** that merges both briefing and detailed views.
+   - Generate `trending_reports/trending_briefing_YYYY-MM-DD.html` using the **exact same CSS and DOM structure** as the template. Fill every section with real data:
+     - **Hero**: update title, date, since-period, source, baseline chips.
+     - **Stats bar**: replace sample numbers with actual counts (total repos, new entries, still hot, dropped out).
+     - **Briefing tab** ("New On The List" table, "Still Hot" table, "Dropped Out" table, "Trend Read" paragraphs, "Full List" table). Remove empty-row placeholders once real rows exist.
+     - **Detailed tab** (`.detail-list`): for each **first-time** project, render a full `.project-card` with header (rank, name+link, lang-tag, stars) and body (what-is-it, analogy in `.proj-analogy`, helps-list in `.proj-helps`, who-needs-it with `.persona` tags). For projects already covered in prior reports, render a shorter `.project-card` with lower opacity and a note referencing the earlier report instead of repeating the full breakdown.
+     - **Tab-switching `<script>`**: keep the exact `switchTab()` function from the template so tabs work.
+   - The HTML file must be self-contained (no external resources). All CSS stays inline in `<style>`, all JS inline in `<script>`.
    - After writing the HTML file, open it in the default browser:
      - **macOS**: run `open trending_reports/trending_briefing_YYYY-MM-DD.html`
      - **Linux**: run `xdg-open trending_reports/trending_briefing_YYYY-MM-DD.html`
