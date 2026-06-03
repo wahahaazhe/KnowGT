@@ -50,6 +50,14 @@ Tired of seeing the same projects every day on GitHub?
 
 **Watch the hot list to see technology's future, not just gossip.**
 
+#### 4. Auto-generates TWO reports every time
+
+Every run creates two files in `trending_reports/`:
+- 📋 **Briefing** → Quick overview: new/still hot/dropped + trend summary (5-min read)
+- 📚 **Detailed** → Deep dive: full explanation of every new project in plain language
+
+**Get exactly the depth you need, from quick scan to full analysis.**
+
 ---
 
 ### 🚀 Quick Start
@@ -93,8 +101,8 @@ After restarting Claude Code, two ways to use:
 #### 🎯 Method 1: Command (Fastest)
 
 ```
-/knowgtzh    # 中文简报 (Chinese)
-/knowgt      # English briefing
+/knowgtzh    # 生成中文简报 + 详细报告
+/knowgt      # Generate English briefing + detailed report
 ```
 
 #### 💬 Method 2: Natural Language
@@ -242,6 +250,14 @@ MIT License
 
 **看热榜，不是看八卦，是看技术的未来。**
 
+#### 4. 每次自动生成两份报告
+
+每次运行自动在 `trending_reports/` 目录生成两个文件：
+- 📋 **简报** → 快速概览：新上榜/持续热门/掉榜 + 趋势总结（5 分钟读完）
+- 📚 **详细报告** → 深度解读：每个新项目的人话版完整解释
+
+**想快速扫一眼还是深入研究，都能满足你。**
+
 ---
 
 ### 🚀 快速开始
@@ -285,8 +301,8 @@ cp knowgt/skills/productivity/github-trending-briefing/knowgtzh/SKILL.md ~/.clau
 #### 🎯 方式一：命令式（最快）
 
 ```
-/knowgtzh    # 中文简报
-/knowgt      # English briefing
+/knowgtzh    # 生成中文简报 + 详细报告
+/knowgt      # Generate English briefing + detailed report
 ```
 
 #### 💬 方式二：自然语言
