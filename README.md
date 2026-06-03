@@ -198,6 +198,12 @@ Issues and PRs welcome!
 
 ---
 
+### 🔗 Community
+
+This project is promoted on the [LINUX DO](https://linux.do) community. Thanks for their support!
+
+---
+
 ### 📄 License
 
 MIT License
@@ -395,6 +401,12 @@ knowgt/
 ### 🤝 贡献
 
 欢迎提交 Issue 和 PR！
+
+---
+
+### 🔗 社区链接
+
+本项目在 [LINUX DO](https://linux.do) 社区进行开源推广，感谢社区的支持！
 
 ---
 
