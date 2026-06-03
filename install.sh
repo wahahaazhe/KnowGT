@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # GitHub Trending Briefing Skills - 一键安装脚本
-# Usage: curl -s https://raw.githubusercontent.com/YOUR_USERNAME/githubvisual/master/install.sh | bash
+# Usage: curl -s https://raw.githubusercontent.com/wahahaazhe/githubvisual/master/install.sh | bash
 
 set -e
 
@@ -30,9 +30,9 @@ git clone --depth 1 https://github.com/wahahaazhe/githubvisual.git "$TMP_DIR/git
     exit 1
 }
 
-# 复制 skills
-cp -r "$TMP_DIR/githubvisual/skills/productivity/github-trending-briefing/gettrending" "$SKILLS_DIR/"
-cp -r "$TMP_DIR/githubvisual/skills/productivity/github-trending-briefing/gettrendingzh" "$SKILLS_DIR/"
+# 复制 skills (单文件格式)
+cp "$TMP_DIR/githubvisual/skills/productivity/github-trending-briefing/gettrending.md" "$SKILLS_DIR/"
+cp "$TMP_DIR/githubvisual/skills/productivity/github-trending-briefing/gettrendingzh.md" "$SKILLS_DIR/"
 
 # 清理临时目录
 rm -rf "$TMP_DIR"

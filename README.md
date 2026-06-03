@@ -27,8 +27,8 @@ iwr https://raw.githubusercontent.com/wahahaazhe/githubvisual/master/install.ps1
 git clone https://github.com/wahahaazhe/githubvisual.git
 
 # 复制 skill 到你的全局 skills 目录
-cp -r githubvisual/skills/productivity/github-trending-briefing/gettrending ~/.claude/skills/
-cp -r githubvisual/skills/productivity/github-trending-briefing/gettrendingzh ~/.claude/skills/
+cp githubvisual/skills/productivity/github-trending-briefing/gettrending.md ~/.claude/skills/
+cp githubvisual/skills/productivity/github-trending-briefing/gettrendingzh.md ~/.claude/skills/
 ```
 
 ### 方式三：作为插件安装

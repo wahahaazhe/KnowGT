@@ -1,5 +1,5 @@
 # GitHub Trending Briefing Skills - Windows 一键安装脚本
-# Usage: iwr https://raw.githubusercontent.com/YOUR_USERNAME/githubvisual/master/install.ps1 | iex
+# Usage: iwr https://raw.githubusercontent.com/wahahaazhe/githubvisual/master/install.ps1 | iex
 
 Write-Host "📦 正在安装 GitHub Trending Briefing Skills..." -ForegroundColor Cyan
 Write-Host ""
@@ -30,9 +30,9 @@ try {
     exit 1
 }
 
-# 复制 skills
-Copy-Item -Recurse -Force "$tmpDir\githubvisual\skills\productivity\github-trending-briefing\gettrending" "$skillsDir\"
-Copy-Item -Recurse -Force "$tmpDir\githubvisual\skills\productivity\github-trending-briefing\gettrendingzh" "$skillsDir\"
+# 复制 skills (单文件格式)
+Copy-Item -Force "$tmpDir\githubvisual\skills\productivity\github-trending-briefing\gettrending.md" "$skillsDir\"
+Copy-Item -Force "$tmpDir\githubvisual\skills\productivity\github-trending-briefing\gettrendingzh.md" "$skillsDir\"
 
 # 清理临时目录
 Remove-Item -Recurse -Force $tmpDir
