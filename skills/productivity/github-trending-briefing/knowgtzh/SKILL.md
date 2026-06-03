@@ -38,12 +38,22 @@ description: 从 WebFetch/WebSearch 结果生成简洁、易读的 GitHub Trendi
    - 仅在解释不熟悉的项目时使用简单的类比。
    - 在说明”谁需要它”时，描述具体的人群和场景，而非泛泛的”开发者”或”工程师”。
 
-6. 保存输出（在仓库中工作时）：
+6. 保存 markdown 输出（在仓库中工作时）：
    - **必须同时生成两份报告**：
      - **简报** → `trending_reports/trending_briefing_YYYY-MM-DD.md`（快速概览）
      - **详细报告** → `trending_reports/trending_detailed_YYYY-MM-DD.md`（新项目逐一深度讲解）
    - 详细报告中，历史上首次出现的项目必须逐一展开讲解，已在历史报告中出现过的项目只需简短引用。
    - 除非用户要求，否则不要覆盖已有报告。
+
+7. 生成 HTML 简报并在浏览器中打开：
+   - 读取模板文件 `skills/productivity/github-trending-briefing/reference/briefing-template.html`，理解其 CSS 和 DOM 结构。
+   - 生成 `trending_reports/trending_briefing_YYYY-MM-DD.html`，使用与模板**完全相同的 CSS 和 DOM 结构**，将步骤 4-5 的实际简报数据填入各个部分。
+   - HTML 文件必须是自包含的（不依赖外部资源），所有 CSS 保持在 `<style>` 标签内。
+   - 写入 HTML 文件后，在默认浏览器中打开：
+     - **macOS**：运行 `open trending_reports/trending_briefing_YYYY-MM-DD.html`
+     - **Linux**：运行 `xdg-open trending_reports/trending_briefing_YYYY-MM-DD.html`
+     - **Windows**：运行 `start trending_reports/trending_briefing_YYYY-MM-DD.html`（cmd）或 `Start-Process trending_reports/trending_briefing_YYYY-MM-DD.html`（PowerShell）
+   - 自动检测平台，不要询问用户使用什么操作系统。
 
 ## 简报结构
 

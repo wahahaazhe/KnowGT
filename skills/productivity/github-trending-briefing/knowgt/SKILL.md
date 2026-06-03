@@ -38,12 +38,22 @@ Create a plain-language briefing from GitHub Trending. Prefer WebFetch/WebSearch
    - Include a simple analogy only when explaining an unfamiliar project.
    - For "who needs it", name concrete people and situations, not broad labels like developer or engineer.
 
-6. Save output when working in a repo:
+6. Save markdown output when working in a repo:
    - **Must generate TWO reports**:
      - **Briefing** → `trending_reports/trending_briefing_YYYY-MM-DD.md` (quick overview)
      - **Detailed** → `trending_reports/trending_detailed_YYYY-MM-DD.md` (deep-dive on each new project)
    - In the detailed report, every first-time project gets a full breakdown. Projects already covered in prior reports get a short citation.
    - Do not overwrite an existing report unless the user asks.
+
+7. Generate HTML briefing and open in browser:
+   - Read the template at `skills/productivity/github-trending-briefing/reference/briefing-template.html` to understand its CSS and DOM structure.
+   - Generate `trending_reports/trending_briefing_YYYY-MM-DD.html` using the **exact same CSS and DOM structure** as the template. Fill each section with the actual briefing data from steps 4-5.
+   - The HTML file must be self-contained (no external resources). All CSS stays inline in `<style>`.
+   - After writing the HTML file, open it in the default browser:
+     - **macOS**: run `open trending_reports/trending_briefing_YYYY-MM-DD.html`
+     - **Linux**: run `xdg-open trending_reports/trending_briefing_YYYY-MM-DD.html`
+     - **Windows**: run `start trending_reports/trending_briefing_YYYY-MM-DD.html` (cmd) or `Start-Process trending_reports/trending_briefing_YYYY-MM-DD.html` (PowerShell)
+   - Detect the platform automatically — do not ask the user which OS they are on.
 
 ## Briefing Shape
 
