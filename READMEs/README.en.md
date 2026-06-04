@@ -56,7 +56,19 @@ Every run creates two files in `trending_reports/`:
 
 **Get exactly the depth you need, from quick scan to full analysis.**
 
-#### 5. Optional HTML Visualization
+#### 5. Hidden Gems Detection - Beat Trending Algorithm Latency
+
+GitHub Trending has latency? Many great projects blow up before they make the list?
+
+**We help you catch them early:**
+- 🚀 **High-potential detection**: > 200 stars today, OR > 500 stars over 3 days, OR > 50% growth in 7 days
+- 👥 **Community heat signals**: Twitter/X, Reddit, Hacker News, Discord discussion volume
+- 📊 **Multi-dimensional metrics**: Contributor count, recent commit activity
+- 🎯 **Clear attribution**: Mark "not on Trending yet but growing fast" with criteria used
+
+**Lock in the next big thing before everyone else.**
+
+#### 6. Optional HTML Visualization
 
 HTML visualization is an **optional add-on feature**:
 - Only generated when user explicitly asks for "HTML", "visualization", "interactive display"
@@ -130,6 +142,7 @@ Both methods work the same, pick what you prefer.
 | 🎯 **Trend Analysis** | Summarize technology winds, interpret the reasons behind |
 | 🌍 **Bilingual Support** | Two independent skills for English and Chinese |
 | 💬 **Plain-Language** | Not just dry lists - tells you "what this actually is" and "who needs it" |
+| 💎 **Hidden Gems** | Find high-potential projects outside Trending, catch them early |
 | 📊 **Optional HTML** | Visualization add-on - only when you ask for it |
 
 ---
