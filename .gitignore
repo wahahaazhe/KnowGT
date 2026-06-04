@@ -8,6 +8,7 @@ __pycache__/
 # 不需要上传的目录
 archive/
 trending_reports/
+toshare/
 
 # 临时文件
 *.tmp
