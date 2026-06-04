@@ -56,15 +56,12 @@ Every run creates two files in `trending_reports/`:
 
 **Get exactly the depth you need, from quick scan to full analysis.**
 
-#### 5. Hidden Gems Detection - Beat Trending Algorithm Latency
+#### 5. Hidden Gems - Beat Trending Latency
 
-GitHub Trending has latency? Many great projects blow up before they make the list?
-
-**We help you catch them early:**
-- 🚀 **High-potential detection**: > 200 stars today, OR > 500 stars over 3 days, OR > 50% growth in 7 days
-- 👥 **Community heat signals**: Twitter/X, Reddit, Hacker News, Discord discussion volume
-- 📊 **Multi-dimensional metrics**: Contributor count, recent commit activity
-- 🎯 **Clear attribution**: Mark "not on Trending yet but growing fast" with criteria used
+**Catch rising stars early:**
+- 🚀 Find projects with > 200 stars today but not on Trending
+- 👥 Check community heat (Reddit/HN/Twitter) and contributor activity
+- 🎯 Add "Hidden Gems" section with detection criteria
 
 **Lock in the next big thing before everyone else.**
 
