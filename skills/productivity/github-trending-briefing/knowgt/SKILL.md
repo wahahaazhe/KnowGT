@@ -27,7 +27,6 @@ Create a plain-language briefing from GitHub Trending. Prefer WebFetch/WebSearch
 4. Compare:
    - Identify new entries that did not appear in recent reports.
    - Identify projects that stayed hot across runs.
-   - Identify projects that dropped out when prior lists are available.
    - Group the trend by theme, such as AI coding agents, developer tools, infra, UI, data, security, or education.
 
 5. Write the briefing:
@@ -80,11 +79,6 @@ Use this structure unless the user asks for something else:
 
 | Project | Evidence | Why It Matters |
 |---------|----------|----------------|
-
-## Dropped Out
-
-| Project | Previous Status | Likely Meaning |
-|---------|-----------------|----------------|
 
 ## Trend Read
 
