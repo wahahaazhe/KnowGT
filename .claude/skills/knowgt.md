@@ -49,8 +49,7 @@ Create a plain-language briefing from GitHub Trending. Prefer WebFetch/WebSearch
 
 7. [Optional] Generate HTML report:
    - **HTML is optional**, not required by default. Only generate when user explicitly asks for "HTML" or "visualization".
-   - If needed, read the template at `skills/productivity/github-trending-briefing/reference/briefing-template.html`:
-   - Read the template at `skills/productivity/github-trending-briefing/reference/briefing-template.html` to understand its CSS and DOM structure. The template is a **single-page, two-tab design** that merges both briefing and detailed views.
+   - If needed, read the template at `skills/productivity/github-trending-briefing/reference/briefing-template.html` to understand its CSS and DOM structure. The template is a **single-page, two-tab design** that merges both briefing and detailed views.
    - Generate `trending_reports/trending_briefing_YYYY-MM-DD.html` using the **exact same CSS and DOM structure** as the template. Fill every section with real data:
      - **Hero**: update title, date, since-period, source, baseline chips.
      - **Stats bar**: replace sample numbers with actual counts (total repos, new entries, recent best).
@@ -132,4 +131,3 @@ After writing, check each item. Rewrite if anything fails:
 - [ ] Did the explanation become childish, generic, or too watered down? If yes, rewrite it.
 - [ ] Was the list split into multiple tiers by growth rate (e.g., "Rising Stars / Steady Growth / Stable")? If yes, merge back into a single table.
 - [ ] Are there any jargon words like "architecture / empowerment / paradigm / leverage"?
-

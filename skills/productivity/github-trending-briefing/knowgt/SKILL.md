@@ -30,7 +30,9 @@ Create a plain-language briefing from GitHub Trending. Prefer WebFetch/WebSearch
    - Group the trend by theme, such as AI coding agents, developer tools, infra, UI, data, security, or education.
 
 5. Write the briefing:
+   - **Structure rule**: Output exactly 4 sections (New On The List, Recent Best, Trend Read, Full List). NEVER split by growth rate into multiple tiers (e.g., "Rising Stars / Steady Growth / Stable").
    - Use direct language. Avoid jargon such as architecture, paradigm, empowerment, enablement, leverage, and strategic moat unless the repository itself uses those words and they are necessary.
+   - **Column name must be "Plain-English Use"**, not "Description", "Summary", or "Features".
    - Explain what problem each project solves and where it fits. Do not flatten useful technical meaning just to sound simple.
    - Keep necessary domain terms when they are the clearest words: LLM, RAG, agent, API, TTS, Markdown, token, crawler, and similar terms are allowed.
    - **Key principle: plain language, not childish language.** A non-specialist should get the gist, and a technical reader should still see the project's real value.
@@ -40,13 +42,14 @@ Create a plain-language briefing from GitHub Trending. Prefer WebFetch/WebSearch
 
 6. Save markdown output when working in a repo:
    - **Must generate TWO reports**:
-     - **Briefing** → `trending_reports/trending_briefing_YYYY-MM-DD.md` (quick overview)
-     - **Detailed** → `trending_reports/trending_detailed_YYYY-MM-DD.md` (deep-dive on each new project)
+     - **Briefing** → `trending_reports/trending_briefing_YYYY-MM-DD.md` (quick overview, exactly 4 sections)
+     - **Detailed** → `trending_reports/trending_detailed_YYYY-MM-DD.md` (deep-dive using "Repository Explanations (Detailed)" template)
    - In the detailed report, every first-time project gets a full breakdown. Projects already covered in prior reports get a short citation.
    - Do not overwrite an existing report unless the user asks.
 
-7. Generate HTML report and open in browser:
-   - Read the template at `reference/briefing-template.html` in this skill directory to understand its CSS and DOM structure. The template is a **single-page, two-tab design** that merges both briefing and detailed views.
+7. [Optional] Generate HTML report:
+   - **HTML is optional**, not required by default. Only generate when user explicitly asks for "HTML" or "visualization".
+   - If needed, read the template at `skills/productivity/github-trending-briefing/reference/briefing-template.html` to understand its CSS and DOM structure. The template is a **single-page, two-tab design** that merges both briefing and detailed views.
    - Generate `trending_reports/trending_briefing_YYYY-MM-DD.html` using the **exact same CSS and DOM structure** as the template. Fill every section with real data:
      - **Hero**: update title, date, since-period, source, baseline chips.
      - **Stats bar**: replace sample numbers with actual counts (total repos, new entries, recent best).
@@ -91,21 +94,40 @@ Short paragraphs explaining the strongest pattern in normal language.
 |------|---------|----------|-------------|--------------|
 ```
 
-## Repository Explanations
+## Repository Explanations (Detailed)
 
-When asked to explain individual repositories, use this format:
+Use only in detailed reports. Keep "Plain-English Use" column in briefings concise.
 
 ```markdown
-**What is it?** 1-2 clear sentences.
+Analyze this GitHub Trending project. Requirements:
 
-**Simple analogy:** Optional; only when it clarifies the project.
+- No jargon like "architecture", "paradigm", "empowerment", "leverage"
+- Keep important domain terms when they are useful: LLM, RAG, agent, API, TTS, Markdown, token, crawler
+- Focus on project positioning, the problem it solves, and the scenario where it matters
+- Use analogies only when they add clarity; do not infantilize the explanation
+- Name concrete people and situations, not "developers" or "engineers"
 
-**What can it help you do?**
-- Help you ...
-- Let you ...
-- Save you from ...
+Output format:
+What is it? (1-2 clear sentences)
+Analogy (Optional; only if it clarifies the project)
+What can it help you do? (3 items, each starts with a verb)
 
-**Who actually needs it?**
-- Someone with a concrete job or recurring problem.
+Help you...
+Let you...
+Save you from...
+
+Who actually needs it? (Be specific, not "developers")
+
+Example: A marketing specialist who makes daily PPTs for the boss
+Example: A new hire inheriting messy legacy code
 ```
 
+## Output Self-Check
+
+After writing, check each item. Rewrite if anything fails:
+- [ ] Are there exactly 4 sections (New On The List, Recent Best, Trend Read, Full List)?
+- [ ] Is the 5th column of "New On The List" table named "Plain-English Use"?
+- [ ] Does every "Plain-English Use" cell preserve the project's type, use case, or differentiator?
+- [ ] Did the explanation become childish, generic, or too watered down? If yes, rewrite it.
+- [ ] Was the list split into multiple tiers by growth rate (e.g., "Rising Stars / Steady Growth / Stable")? If yes, merge back into a single table.
+- [ ] Are there any jargon words like "architecture / empowerment / paradigm / leverage"?
